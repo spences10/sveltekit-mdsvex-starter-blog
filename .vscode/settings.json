@@ -1,5 +1,5 @@
 {
   "git.enableSmartCommit": true,
   "git.postCommitCommand": "sync",
-  "cSpell.words": ["mdsvex"]
+  "cSpell.words": ["abbr", "mdsvex", "rehype", "sveltejs"]
 }
