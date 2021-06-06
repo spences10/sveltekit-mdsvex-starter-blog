@@ -1,15 +1,23 @@
 // https://github.com/mvasigh/sveltekit-mdsvex-blog/blob/4cde064ece/src/lib/util.js
-const slugRegex = /([\w-]+)\.(svelte\.mdx|md|svx)/i
 
 export async function getAllPosts(globArr) {
   const postPromises = []
 
   for (let [path, resolver] of Object.entries(globArr)) {
-    const match = path.match(slugRegex)
-    if (!match || !match[1]) continue
-
-    const slug = match[1]
-
+    const pathSplit = path.split(`/`)
+    const removeExtension = () => {
+      // named files, in posts folder
+      if (pathSplit.length === 4) {
+        // remove file extension
+        return pathSplit.slice(-1)[0].replace(/\.[^/.]+$/, '')
+      }
+      // else nested folder with index file
+      return pathSplit
+        .splice(3, pathSplit.length, -3)
+        .join(`/`)
+        .slice(0, -`index.md`.length - 1)
+    }
+    const slug = removeExtension()
     const promise = resolver().then(post => [
       slug,
       {

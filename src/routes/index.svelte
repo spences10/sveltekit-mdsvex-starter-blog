@@ -1,5 +1,5 @@
 <script context="module">
-  const files = import.meta.glob('../posts/**/*.{md,mdx}')
+  const files = import.meta.glob('../../posts/**/*.{md,svx}')
   import { getAllPosts } from '$lib/util'
   /**
    * @type {import('@sveltejs/kit').Load}
@@ -44,9 +44,9 @@
   export let posts
 </script>
 
+<pre>{JSON.stringify(posts, null, 2)}</pre>
 <ul>
   {#each posts as [slug, { title }]}
-    <!-- <pre>{JSON.stringify(post, null, 2)}</pre> -->
     <li
       class="text-4xl font-medium my-5 hover:underline hover:text-purple-600"
     >
