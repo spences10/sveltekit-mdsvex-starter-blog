@@ -29,6 +29,6 @@
     "remark-github": "11.1.0",
     "svelte": "3.42.1",
     "svelte-preprocess": "4.8.0",
-    "tailwindcss": "2.2.8"
+    "tailwindcss": "2.2.9"
   }
 }
