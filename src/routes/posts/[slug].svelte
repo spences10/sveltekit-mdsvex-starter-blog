@@ -19,7 +19,7 @@
   let { html, date, title, tags, published, readingTime } = post
 </script>
 
-<div class="flex flex-col flex-grow">
+<article class="flex flex-col flex-grow">
   <h1 class="font-bold mb-5 text-5xl">Posts</h1>
   <div class="">
     <h1>{title}</h1>
@@ -27,8 +27,8 @@
     <pre>{JSON.stringify(tags, null, 2)}</pre>
     <p>{published}</p>
     <pre>{JSON.stringify(readingTime, null, 2)}</pre>
-    <article class="prose">
+    <article class="all-prose">
       {@html html}
     </article>
   </div>
-</div>
+</article>
