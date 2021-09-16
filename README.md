@@ -22,5 +22,5 @@ Uses:
 [matt jennings]: https://github.com/mattjennings
 [sveltekit-blog-template]:
   https://github.com/mattjennings/sveltekit-blog-template
-[michael oliver]: https://github.com/michael0liver)
+[michael oliver]: https://github.com/michael0liver
 [this issue]: https://github.com/pngwn/MDsveX/issues/294
