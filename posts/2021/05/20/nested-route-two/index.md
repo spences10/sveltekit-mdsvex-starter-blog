@@ -23,6 +23,8 @@ officia in officia esse dolore quis amet aliquip eu consectetur. Ea
 exercitation ullamco culpa eu occaecat enim fugiat tempor laborum qui
 nostrud.
 
+![picture](./favicon.png)
+
 Sunt velit exercitation excepteur do dolore laborum magna minim
 cillum. Nisi fugiat ad aliqua do ea exercitation veniam excepteur id
 excepteur velit minim. Id cillum ipsum pariatur ad do magna esse
@@ -32,3 +34,7 @@ Laborum amet dolore non consequat eu do officia cillum tempor duis.
 Anim fugiat nostrud in veniam ut tempor non occaecat et ad proident
 culpa labore. Irure ullamco voluptate sit adipisicing culpa ipsum
 voluptate.
+
+<!-- Links -->
+
+[picture]: ./favicon.png
