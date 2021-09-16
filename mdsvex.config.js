@@ -1,3 +1,9 @@
+import relativeImages from 'mdsvex-relative-images'
+import autolinkHeadings from 'rehype-autolink-headings'
+import slugPlugin from 'rehype-slug'
+import remarkExternalLinks from 'remark-external-links'
+import readingTime from 'remark-reading-time'
+
 const config = {
   extensions: ['.svelte.md', '.md', '.svx'],
 
@@ -5,8 +11,22 @@ const config = {
     dashes: 'oldschool',
   },
 
-  remarkPlugins: [],
-  rehypePlugins: [],
+  remarkPlugins: [
+    // adds a `readingTime` frontmatter attribute
+    readingTime(),
+    // external links open in a new tab
+    [remarkExternalLinks, { target: '_blank', rel: 'noopener' }],
+    relativeImages,
+  ],
+  rehypePlugins: [
+    slugPlugin,
+    [
+      autolinkHeadings,
+      {
+        behavior: 'wrap',
+      },
+    ],
+  ],
 }
 
 export default config
