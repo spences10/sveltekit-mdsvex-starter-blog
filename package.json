@@ -11,6 +11,7 @@
     "clean": "rm -rf .svelte-kit .vercel_build_output build node_modules"
   },
   "devDependencies": {
+    "@sveltejs/adapter-static": "^1.0.0-next.19",
     "@sveltejs/kit": "next",
     "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.3.4",
@@ -31,5 +32,6 @@
     "tailwindcss": "^2.2.15",
     "theme-change": "^2.0.2",
     "truncate-html": "^1.0.4"
-  }
+  },
+  "dependencies": {}
 }

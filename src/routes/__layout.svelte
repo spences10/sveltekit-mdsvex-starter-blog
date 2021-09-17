@@ -3,6 +3,7 @@
   import Nav from '$lib/components/nav.svelte'
   import { onMount } from 'svelte'
   import { themeChange } from 'theme-change'
+  import '../prism.css'
   import '../styles.css'
 
   onMount(async () => {
@@ -13,7 +14,7 @@
 <Nav />
 
 <main
-  class="mx-auto max-w-[90ch] px-4 relative sm:px-6 lg:px-8 break-all"
+  class="mx-auto max-w-[90ch] px-4 relative sm:px-6 lg:px-8 break-normal"
 >
   <slot />
 </main>
