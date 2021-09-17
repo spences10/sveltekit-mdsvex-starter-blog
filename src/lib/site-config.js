@@ -1,4 +1,6 @@
-export const siteName = 'The SvelteKit Blog'
+export const siteName = 'SvelteKit Blog Template'
+
+export const authorName = 'Author Name'
 
 export const website = `https://thesveltekit.com`
 
