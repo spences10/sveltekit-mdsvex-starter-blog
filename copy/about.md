@@ -19,7 +19,7 @@ Will give this route: `posts/a-post-about-bread`.
 
 Good to note if you want to include local images in your posts.
 
-Give them the frontmatter
+Give them the frontmatter:
 
 ```markdown
 ---
