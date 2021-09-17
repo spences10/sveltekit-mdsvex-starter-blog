@@ -15,7 +15,7 @@
       <p class="mb-5 break-words">
         {description}
       </p>
-      <a href={`/posts`} class="btn btn-primary"
+      <a sveltekit:prefetch href={`/posts`} class="btn btn-primary"
         >Check Out The Posts Page</a
       >
     </div>

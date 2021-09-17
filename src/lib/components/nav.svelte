@@ -17,7 +17,7 @@
     >
       {#each pages as { title, path }}
         <li>
-          <a href={path}>{title}</a>
+          <a sveltekit:prefetch href={path}>{title}</a>
         </li>
       {/each}
     </ul>
@@ -25,8 +25,10 @@
   <div class="hidden px-2 mx-2 navbar-center lg:flex">
     <div class="flex items-stretch">
       {#each pages as { title, path }}
-        <a href={path} class="btn btn-ghost btn-sm rounded-btn"
-          >{title}</a
+        <a
+          sveltekit:prefetch
+          href={path}
+          class="btn btn-ghost btn-sm rounded-btn">{title}</a
         >
       {/each}
     </div>
