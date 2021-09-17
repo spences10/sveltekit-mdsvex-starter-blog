@@ -3,7 +3,7 @@
 
   export let post
 
-  let excerpt = truncateHtml(post.html, 300, {
+  let excerpt = truncateHtml(post.html, 150, {
     ellipsis: '...',
   })
 </script>
@@ -17,7 +17,7 @@
         {post.title}
       </h2>
       <div class="mb-4 text-accent uppercase text-sm font-bold">
-        <time>{Date(post.date)}</time>
+        <time>{new Date(post.date).toDateString()}</time>
         •
         <span>{post.readingTime.text}</span>
       </div>
