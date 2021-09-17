@@ -9,14 +9,14 @@
 </script>
 
 <article
-  class="bg-base-100 mb-10 p-5 transition border border-primary shadow-xl card hover:text-accent-focus first:pt-0"
+  class="border border-primary bg-base-100 shadow-xl mb-10 p-5 transition card hover:text-accent-focus first:pt-0"
 >
   <a sveltekit:prefetch href={`/posts/${post.slug}`}>
     <div>
-      <h2 class="font-black mb-1 text-3xl mt-5">
+      <h2 class="font-black mt-5 mb-1 text-3xl">
         {post.title}
       </h2>
-      <div class="mb-4 text-accent uppercase text-sm font-bold">
+      <div class="font-bold text-accent text-sm mb-4 uppercase">
         <time>{new Date(post.date).toDateString()}</time>
         •
         <span>{post.readingTime.text}</span>

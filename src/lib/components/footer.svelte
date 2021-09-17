@@ -6,7 +6,7 @@
   import { socialLinks } from '$lib/site-config'
 </script>
 
-<footer class="p-10 footer bg-neutral text-neutral-content">
+<footer class="bg-neutral text-neutral-content p-10 footer">
   <div>
     <BadgeCheck height={60} width={60} />
     <p>

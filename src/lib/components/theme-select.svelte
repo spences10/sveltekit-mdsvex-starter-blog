@@ -1,7 +1,7 @@
 <div>
   <select
     data-choose-theme
-    class="pr-9 select select-bordered select-primary select-xs text-primary-content bg-primary"
+    class="bg-primary text-primary-content pr-9 select select-bordered select-primary select-xs"
   >
     <option disabled="disabled" selected="selected"
       >Choose a theme</option

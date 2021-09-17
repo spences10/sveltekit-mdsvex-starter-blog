@@ -4,16 +4,16 @@
 </script>
 
 <div
-  class="navbar mb-2 shadow-lg bg-neutral text-neutral-content mb-16 sticky top-0 z-10"
+  class="bg-neutral shadow-lg text-neutral-content mb-2 mb-16 top-0 z-10 navbar sticky"
 >
-  <div class="px-2 mx-2 navbar-start">
-    <span class="text-lg font-bold">{siteName}</span>
+  <div class="mx-2 px-2 navbar-start">
+    <span class="font-bold text-lg">{siteName}</span>
   </div>
-  <div class="dropdown lg:hidden dropdown-right">
+  <div class="dropdown dropdown-right lg:hidden">
     <div tabindex="0" class="m-1 btn">Links</div>
     <ul
       tabindex="0"
-      class="p-2 shadow menu dropdown-content bg-neutral text-neutral-content rounded-box w-52 "
+      class="bg-neutral rounded-box shadow text-neutral-content p-2 w-52 menu dropdown-content "
     >
       {#each pages as { title, path }}
         <li>
@@ -22,13 +22,13 @@
       {/each}
     </ul>
   </div>
-  <div class="hidden px-2 mx-2 navbar-center lg:flex">
+  <div class="mx-2 px-2 hidden navbar-center lg:flex">
     <div class="flex items-stretch">
       {#each pages as { title, path }}
         <a
           sveltekit:prefetch
           href={path}
-          class="btn btn-ghost btn-sm rounded-btn">{title}</a
+          class="rounded-btn btn btn-ghost btn-sm">{title}</a
         >
       {/each}
     </div>
