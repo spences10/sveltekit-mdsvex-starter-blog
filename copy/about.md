@@ -4,7 +4,7 @@ A opinioned Markdown blog starter built with SvelteKit, MDSveX,
 Tailwind CSS and DaisyUI.
 
 Put your Markdown docs in the `/posts` directory. The route for the
-post is determined from the containing folder or the file name.
+post is determined from the containing folder.
 
 So this file structure:
 
@@ -16,16 +16,6 @@ this-project-directory/
 ```
 
 Will give this route: `posts/a-post-about-bread`.
-
-This file structure:
-
-```text
-this-project-directory/
-├─ copy/
-│  └─ a-post-about-bread.md
-```
-
-Will give the same route: `posts/a-post-about-bread`.
 
 Good to note if you want to include local images in your posts.
 
