@@ -3,8 +3,8 @@
   import Nav from '$lib/components/nav.svelte'
   import { onMount } from 'svelte'
   import { themeChange } from 'theme-change'
+  import '../app.css'
   import '../prism.css'
-  import '../styles.css'
 
   onMount(async () => {
     themeChange(false)
