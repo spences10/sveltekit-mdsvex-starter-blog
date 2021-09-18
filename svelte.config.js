@@ -11,7 +11,10 @@ const config = {
     // hydrate the <div id="svelte"> element in src/app.html
     target: '#svelte',
     adapter: adapter(),
-    adapter: adapter(),
+    adapter: adapter({
+      pages: 'public',
+      assets: 'public',
+    }),
     prerender: {
       crawl: true,
       enabled: true,
