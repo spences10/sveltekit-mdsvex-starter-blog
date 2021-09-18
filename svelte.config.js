@@ -12,12 +12,6 @@ const config = {
     target: '#svelte',
     adapter: adapter(),
     adapter: adapter(),
-    prerender: {
-      crawl: true,
-      enabled: true,
-      onError: 'continue',
-      entries: ['*'],
-    },
   },
 
   preprocess: [
