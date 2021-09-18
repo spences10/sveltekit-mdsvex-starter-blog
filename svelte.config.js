@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-static'
+import adapter from '@sveltejs/adapter-vercel'
 import { mdsvex } from 'mdsvex'
 import preprocess from 'svelte-preprocess'
 import mdsvexConfig from './mdsvex.config.js'
@@ -11,10 +11,7 @@ const config = {
     // hydrate the <div id="svelte"> element in src/app.html
     target: '#svelte',
     adapter: adapter(),
-    adapter: adapter({
-      pages: 'public',
-      assets: 'public',
-    }),
+    adapter: adapter(),
     prerender: {
       crawl: true,
       enabled: true,
