@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-vercel'
+import adapter from '@sveltejs/adapter-static'
 import { mdsvex } from 'mdsvex'
 import preprocess from 'svelte-preprocess'
 import mdsvexConfig from './mdsvex.config.js'
@@ -7,18 +7,24 @@ import mdsvexConfig from './mdsvex.config.js'
 const config = {
   extensions: ['.svelte', ...mdsvexConfig.extensions],
 
+  kit: {
+    // hydrate the <div id="svelte"> element in src/app.html
+    target: '#svelte',
+    adapter: adapter(),
+    prerender: {
+      crawl: true,
+      enabled: true,
+      onError: 'continue',
+      entries: ['*'],
+    },
+  },
+
   preprocess: [
     mdsvex(mdsvexConfig),
     preprocess({
       postcss: true,
     }),
   ],
-
-  kit: {
-    // hydrate the <div id="svelte"> element in src/app.html
-    target: '#svelte',
-    adapter: adapter(),
-  },
 }
 
 export default config
