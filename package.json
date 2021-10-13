@@ -29,7 +29,7 @@
     "remark-reading-time": "1.0.1",
     "svelte": "3.43.1",
     "svelte-preprocess": "4.9.8",
-    "tailwindcss": "2.2.16",
+    "tailwindcss": "2.2.17",
     "theme-change": "2.0.2",
     "truncate-html": "1.0.4"
   },
