@@ -1,5 +1,6 @@
 import adapter from '@sveltejs/adapter-vercel'
 import { mdsvex } from 'mdsvex'
+import path from 'path'
 import preprocess from 'svelte-preprocess'
 import mdsvexConfig from './mdsvex.config.js'
 
@@ -11,6 +12,15 @@ const config = {
     // hydrate the <div id="svelte"> element in src/app.html
     target: '#svelte',
     adapter: adapter(),
+    vite: {
+      resolve: {
+        alias: {
+          '@components': path.resolve('./src/lib/components'),
+          '@lib': path.resolve('./src/lib'),
+          '@icons': path.resolve('./src/lib/icons'),
+        },
+      },
+    },
   },
 
   preprocess: [

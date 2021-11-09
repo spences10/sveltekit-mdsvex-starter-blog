@@ -1,10 +1,10 @@
 <script>
-  import { pages, siteName } from '$lib/site-config'
+  import { pages, siteName } from '@lib/site-config'
   import ThemeSelect from './theme-select.svelte'
 </script>
 
 <div
-  class="bg-neutral shadow-lg text-neutral-content mb-2 mb-16 top-0 z-10 navbar sticky"
+  class="bg-neutral shadow-lg text-neutral-content mb-16 top-0 z-10 navbar sticky"
 >
   <div class="mx-2 px-2 navbar-start">
     <span class="font-bold text-lg">{siteName}</span>

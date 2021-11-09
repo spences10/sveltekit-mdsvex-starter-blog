@@ -1,7 +1,7 @@
 <script>
-  import EndlessClouds from '$lib/components/endless-clouds.svelte'
-  import Head from '$lib/components/head.svelte'
-  import { description, siteName } from '$lib/site-config'
+  import EndlessClouds from '@components/endless-clouds.svelte'
+  import Head from '@components/head.svelte'
+  import { description, siteName } from '@lib/site-config'
 </script>
 
 <Head title={`Hello World`} />

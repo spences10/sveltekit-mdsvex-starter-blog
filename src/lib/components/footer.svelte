@@ -1,9 +1,9 @@
 <script>
-  import BadgeCheck from '$lib/icons/badge-check.svelte'
-  import GitHub from '$lib/icons/git-hub..svelte'
-  import Twitter from '$lib/icons/twitter.svelte'
-  import YouTube from '$lib/icons/you-tube.svelte'
-  import { socialLinks } from '$lib/site-config'
+  import BadgeCheck from '@icons/badge-check.svelte'
+  import GitHub from '@icons/git-hub..svelte'
+  import Twitter from '@icons/twitter.svelte'
+  import YouTube from '@icons/you-tube.svelte'
+  import { socialLinks } from '@lib/site-config'
 </script>
 
 <footer class="bg-neutral text-neutral-content p-10 footer">

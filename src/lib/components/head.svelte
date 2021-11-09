@@ -1,5 +1,5 @@
 <script>
-  import { authorName, website } from '$lib/site-config'
+  import { authorName, website } from '@lib/site-config'
 
   export let title
   export let description
