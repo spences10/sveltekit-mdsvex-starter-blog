@@ -18,7 +18,7 @@ specifiers:
   remark-external-links: 9.0.1
   remark-reading-time: 1.0.1
   svelte: 3.44.3
-  svelte-preprocess: 4.10.0
+  svelte-preprocess: 4.10.1
   tailwindcss: 3.0.5
   theme-change: 2.0.2
   truncate-html: 1.0.4
@@ -41,7 +41,7 @@ devDependencies:
   remark-external-links: 9.0.1
   remark-reading-time: 1.0.1
   svelte: 3.44.3
-  svelte-preprocess: 4.10.0_780263383bd82c24c3a39ba88c8c2aa6
+  svelte-preprocess: 4.10.1_780263383bd82c24c3a39ba88c8c2aa6
   tailwindcss: 3.0.5_16a290f6d0e3717bf6d2667234aebd30
   theme-change: 2.0.2
   truncate-html: 1.0.4
@@ -1936,8 +1936,8 @@ packages:
       svelte: 3.44.3
     dev: true
 
-  /svelte-preprocess/4.10.0_780263383bd82c24c3a39ba88c8c2aa6:
-    resolution: {integrity: sha512-uZgGyC4SwkFoby2ceiMgGYs4qHYGz2fT06cAsHO8FHdDbvj1dKQyQ/fD9OB0KLymVv0fmzuJo/On7Kv7AeVhWA==}
+  /svelte-preprocess/4.10.1_780263383bd82c24c3a39ba88c8c2aa6:
+    resolution: {integrity: sha512-NSNloaylf+o9UeyUR2KvpdxrAyMdHl3U7rMnoP06/sG0iwJvlUM4TpMno13RaNqovh4AAoGsx1jeYcIyuGUXMw==}
     engines: {node: '>= 9.11.2'}
     requiresBuild: true
     peerDependencies:
