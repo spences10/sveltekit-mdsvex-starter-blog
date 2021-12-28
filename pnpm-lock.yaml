@@ -19,14 +19,14 @@ specifiers:
   remark-reading-time: 1.0.1
   svelte: 3.44.3
   svelte-preprocess: 4.10.1
-  tailwindcss: 3.0.7
+  tailwindcss: 3.0.8
   theme-change: 2.0.2
   truncate-html: 1.0.4
 
 devDependencies:
   '@sveltejs/adapter-vercel': 1.0.0-next.32
-  '@sveltejs/kit': 1.0.0-next.202_svelte@3.44.3
-  '@tailwindcss/typography': 0.5.0_tailwindcss@3.0.7
+  '@sveltejs/kit': 1.0.0-next.206_svelte@3.44.3
+  '@tailwindcss/typography': 0.5.0_tailwindcss@3.0.8
   autoprefixer: 10.4.0_postcss@8.4.5
   cssnano: 5.0.14_postcss@8.4.5
   daisyui: 1.19.0
@@ -42,7 +42,7 @@ devDependencies:
   remark-reading-time: 1.0.1
   svelte: 3.44.3
   svelte-preprocess: 4.10.1_780263383bd82c24c3a39ba88c8c2aa6
-  tailwindcss: 3.0.7_16a290f6d0e3717bf6d2667234aebd30
+  tailwindcss: 3.0.8_16a290f6d0e3717bf6d2667234aebd30
   theme-change: 2.0.2
   truncate-html: 1.0.4
 
@@ -104,14 +104,14 @@ packages:
       esbuild: 0.13.15
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.202_svelte@3.44.3:
-    resolution: {integrity: sha512-rXmJ0FplkWvD1CaeCfejRYhOJYrlmeUm5Fkw7gIKDdWPQev5rqOhd9B9ZvRpq35oMqCAwaOfK+e5S6k+83feEQ==}
+  /@sveltejs/kit/1.0.0-next.206_svelte@3.44.3:
+    resolution: {integrity: sha512-AQEOKZLG1GKkuBfWUKKxMs9A3AzE9tSHYc4Lu+AL/4BAs4erIFdOei2ldsxak2ICxxeaCloqVRPvIOtj7UEacg==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
       svelte: ^3.44.0
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.30_svelte@3.44.3+vite@2.7.2
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.32_svelte@3.44.3+vite@2.7.2
       cheap-watch: 1.0.4
       sade: 1.7.4
       svelte: 3.44.3
@@ -124,19 +124,19 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/1.0.0-next.30_svelte@3.44.3+vite@2.7.2:
-    resolution: {integrity: sha512-YQqdMxjL1VgSFk4/+IY3yLwuRRapPafPiZTiaGEq1psbJYSNYUWx9F1zMm32GMsnogg3zn99mGJOqe3ld3HZSg==}
+  /@sveltejs/vite-plugin-svelte/1.0.0-next.32_svelte@3.44.3+vite@2.7.2:
+    resolution: {integrity: sha512-Lhf5BxVylosHIW6U2s6WDQA39ycd+bXivC8gHsXCJeLzxoHj7Pv7XAOk25xRSXT4wHg9DWFMBQh2DFU0DxHZ2g==}
     engines: {node: ^14.13.1 || >= 16}
     peerDependencies:
       diff-match-patch: ^1.0.5
       svelte: ^3.44.0
-      vite: ^2.6.0
+      vite: ^2.7.0
     peerDependenciesMeta:
       diff-match-patch:
         optional: true
     dependencies:
       '@rollup/pluginutils': 4.1.1
-      debug: 4.3.2
+      debug: 4.3.3
       kleur: 4.1.4
       magic-string: 0.25.7
       require-relative: 0.8.7
@@ -147,7 +147,7 @@ packages:
       - supports-color
     dev: true
 
-  /@tailwindcss/typography/0.5.0_tailwindcss@3.0.7:
+  /@tailwindcss/typography/0.5.0_tailwindcss@3.0.8:
     resolution: {integrity: sha512-1p/3C6C+JJziS/ghtG8ACYalbA2SyLJY27Pm33cVTlAoY6VQ7zfm2H64cPxUMBkVIlWXTtWHhZcZJPobMRmQAA==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || insiders'
@@ -156,7 +156,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
-      tailwindcss: 3.0.7_16a290f6d0e3717bf6d2667234aebd30
+      tailwindcss: 3.0.8_16a290f6d0e3717bf6d2667234aebd30
     dev: true
 
   /@trysound/sax/0.2.0:
@@ -565,8 +565,8 @@ packages:
     resolution: {integrity: sha512-SaKe2acN734KVtrrCvxXFnrl1BOQzXqQybHbUZnXz3kK5h903mK/kKHWx+423Y03+DikWJbuGYWgcYHTQk3dwQ==}
     dev: true
 
-  /debug/4.3.2:
-    resolution: {integrity: sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==}
+  /debug/4.3.3:
+    resolution: {integrity: sha512-/zxw5+vh1Tfv+4Qn7a5nsbcJKPaSvCDhojn6FEl9vupwK2VCSDtEiEtqr8DFtzYFOdz63LBkxec7DYuc2jon6Q==}
     engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
@@ -1996,8 +1996,8 @@ packages:
       stable: 0.1.8
     dev: true
 
-  /tailwindcss/3.0.7_16a290f6d0e3717bf6d2667234aebd30:
-    resolution: {integrity: sha512-rZdKNHtC64jcQncLoWOuCzj4lQDTAgLtgK3WmQS88tTdpHh9OwLqULTQxI3tw9AMJsqSpCKlmcjW/8CSnni6zQ==}
+  /tailwindcss/3.0.8_16a290f6d0e3717bf6d2667234aebd30:
+    resolution: {integrity: sha512-Yww1eRYO1AxITJmW/KduZPxNvYdHuedeKwPju9Oakp7MdiixRi5xkpLhirsc81QCxHL0eoce6qKmxXwYGt4Cjw==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
