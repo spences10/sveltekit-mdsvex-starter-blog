@@ -13,7 +13,7 @@ specifiers:
   postcss-load-config: 3.1.0
   prettier: 2.5.1
   prettier-plugin-svelte: 2.5.1
-  rehype-autolink-headings: 6.1.0
+  rehype-autolink-headings: 6.1.1
   rehype-slug: 5.0.0
   remark-external-links: 9.0.1
   remark-reading-time: 1.0.1
@@ -25,7 +25,7 @@ specifiers:
 
 devDependencies:
   '@sveltejs/adapter-vercel': 1.0.0-next.34
-  '@sveltejs/kit': 1.0.0-next.211_svelte@3.44.3
+  '@sveltejs/kit': 1.0.0-next.212_svelte@3.44.3
   '@tailwindcss/typography': 0.5.0_tailwindcss@3.0.8
   autoprefixer: 10.4.0_postcss@8.4.5
   cssnano: 5.0.14_postcss@8.4.5
@@ -36,7 +36,7 @@ devDependencies:
   postcss-load-config: 3.1.0
   prettier: 2.5.1
   prettier-plugin-svelte: 2.5.1_prettier@2.5.1+svelte@3.44.3
-  rehype-autolink-headings: 6.1.0
+  rehype-autolink-headings: 6.1.1
   rehype-slug: 5.0.0
   remark-external-links: 9.0.1
   remark-reading-time: 1.0.1
@@ -104,8 +104,8 @@ packages:
       esbuild: 0.13.15
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.211_svelte@3.44.3:
-    resolution: {integrity: sha512-jS28R40H6BypK5rSVUzNmQW3NaBTFijj4fJPEtx8YeSLuzqm7ZGl3wwqF+FRxisP6oyz2GkYSARRxzemDOfn9A==}
+  /@sveltejs/kit/1.0.0-next.212_svelte@3.44.3:
+    resolution: {integrity: sha512-hjpk/Rqrl6hhNf1Qsx6EDvL3Cm9JvmvW/Z1FRYVhGg1xin/JQkPgFzTU27NBSYhtK1t4buLmlO1tqdMvurs9Fg==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
@@ -1723,8 +1723,8 @@ packages:
     resolution: {integrity: sha512-onYyVhBNr4CmAxFsKS7bz+uTLRakypIe4R+5A824vBSkQy/hB3fZepoVEf8OVAxzLvK+H/jm9TzpI3ETSm64Kg==}
     dev: true
 
-  /rehype-autolink-headings/6.1.0:
-    resolution: {integrity: sha512-v8xnvhDtxc2jTgnhVlR2sG168TyNTK93Myx+uTzQNpNxzkRnQKz3hZQKoh7fxuOzJhCGa/z6qqZSPB2BOi/HRw==}
+  /rehype-autolink-headings/6.1.1:
+    resolution: {integrity: sha512-NMYzZIsHM3sA14nC5rAFuUPIOfg+DFmf9EY1YMhaNlB7+3kK/ZlE6kqPfuxr1tsJ1XWkTrMtMoyHosU70d35mA==}
     dependencies:
       '@types/hast': 2.3.4
       extend: 3.0.2
