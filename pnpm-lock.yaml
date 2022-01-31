@@ -3,7 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@sveltejs/adapter-vercel': 1.0.0-next.39
   '@sveltejs/kit': next
-  '@tailwindcss/typography': 0.5.0
+  '@tailwindcss/typography': 0.5.1
   autoprefixer: 10.4.2
   cssnano: 5.0.16
   daisyui: 1.25.4
@@ -25,8 +25,8 @@ specifiers:
 
 devDependencies:
   '@sveltejs/adapter-vercel': 1.0.0-next.39
-  '@sveltejs/kit': 1.0.0-next.250_svelte@3.46.3
-  '@tailwindcss/typography': 0.5.0_tailwindcss@3.0.18
+  '@sveltejs/kit': 1.0.0-next.251_svelte@3.46.3
+  '@tailwindcss/typography': 0.5.1_tailwindcss@3.0.18
   autoprefixer: 10.4.2_postcss@8.4.5
   cssnano: 5.0.16_postcss@8.4.5
   daisyui: 1.25.4
@@ -104,8 +104,8 @@ packages:
       esbuild: 0.13.15
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.250_svelte@3.46.3:
-    resolution: {integrity: sha512-8Ctaqgb+pdws06gfKDy+DfEIq3epbhQnRrdavVrG2rv+lr/qAqz788OX4RlriBliNBFPkpIPYy4ldLJ7yoAmyg==}
+  /@sveltejs/kit/1.0.0-next.251_svelte@3.46.3:
+    resolution: {integrity: sha512-7GtUrUHqOa7ISo86PlICcMKcfGodOZwP9p7hXnN4t1yMWIQD2eKZlJffvnwx1X+NMcJ8hLChgcjGYjc1xZABhQ==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
@@ -146,15 +146,14 @@ packages:
       - supports-color
     dev: true
 
-  /@tailwindcss/typography/0.5.0_tailwindcss@3.0.18:
-    resolution: {integrity: sha512-1p/3C6C+JJziS/ghtG8ACYalbA2SyLJY27Pm33cVTlAoY6VQ7zfm2H64cPxUMBkVIlWXTtWHhZcZJPobMRmQAA==}
+  /@tailwindcss/typography/0.5.1_tailwindcss@3.0.18:
+    resolution: {integrity: sha512-AmSzZSgLhHKlILKduU+PKBTHL6c+al82syZlRid1xgmlWwXagLigO+O++B4C0scpMfzW//f/3YCRcwwEHWoU3w==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || insiders'
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
-      lodash.uniq: 4.5.0
       tailwindcss: 3.0.18_ef48b3b8837f8a23677bffe8f9cd866d
     dev: true
 
