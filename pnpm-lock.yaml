@@ -7,7 +7,7 @@ specifiers:
   autoprefixer: 10.4.2
   cssnano: 5.0.16
   daisyui: 1.25.4
-  mdsvex: 0.9.8
+  mdsvex: 0.10.5
   mdsvex-relative-images: 1.0.1
   postcss: 8.4.5
   postcss-load-config: 3.1.1
@@ -30,7 +30,7 @@ devDependencies:
   autoprefixer: 10.4.2_postcss@8.4.5
   cssnano: 5.0.16_postcss@8.4.5
   daisyui: 1.25.4
-  mdsvex: 0.9.8_svelte@3.46.3
+  mdsvex: 0.10.5_svelte@3.46.3
   mdsvex-relative-images: 1.0.1
   postcss: 8.4.5
   postcss-load-config: 3.1.1
@@ -1162,8 +1162,8 @@ packages:
       unist-util-visit: 3.1.0
     dev: true
 
-  /mdsvex/0.9.8_svelte@3.46.3:
-    resolution: {integrity: sha512-5QvThjRKoKkGH00qdHxLZ5ROd80RgGiJvM2B9opeFreaiGFTLoKKFUgEBCslLrwM24cVGJLmIM3rR83OFDf3tQ==}
+  /mdsvex/0.10.5_svelte@3.46.3:
+    resolution: {integrity: sha512-/B23WZn5Vjrjh7Qp2YsOXLkU9YFm59IEylKNXC10o05ZaCP4LNv32tGXKP6aEssss6hk/LdISJuneELHFIS2pQ==}
     peerDependencies:
       svelte: 3.x
     dependencies:
