@@ -27,11 +27,11 @@
     "rehype-slug": "5.0.1",
     "remark-external-links": "9.0.1",
     "remark-reading-time": "1.0.1",
-    "svelte": "3.48.0",
+    "svelte": "3.49.0",
     "svelte-preprocess": "4.10.7",
     "tailwindcss": "3.1.4",
     "theme-change": "2.1.0",
-    "truncate-html": "1.0.4"
-  },
-  "dependencies": {}
+    "truncate-html": "1.0.4",
+    "vite": "^2.9.14"
+  }
 }
