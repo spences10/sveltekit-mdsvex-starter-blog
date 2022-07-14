@@ -32,6 +32,6 @@
     "tailwindcss": "3.1.6",
     "theme-change": "2.1.0",
     "truncate-html": "1.0.4",
-    "vite": "^2.9.14"
+    "vite": "2.9.14"
   }
 }
