@@ -1,11 +1,5 @@
 <script>
-  // import truncateHtml from 'truncate-html'
-
   export let post
-
-  // let excerpt = truncateHtml(post.html, 150, {
-  //   ellipsis: '...',
-  // })
 </script>
 
 <article
@@ -18,12 +12,7 @@
       </h2>
       <div class="font-bold text-accent text-sm mb-4 uppercase">
         <time>{new Date(post.date).toDateString()}</time>
-        •
-        <span>{post.readingTime.text}</span>
       </div>
     </div>
-    <!-- <div class="all-prose">
-      {@html post.html}
-    </div> -->
   </a>
 </article>

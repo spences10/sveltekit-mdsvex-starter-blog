@@ -1,12 +1,11 @@
-import { posts } from './_posts'
+import { getPosts } from '$lib/posts'
 
-export async function get(req) {
+export const GET = async req => {
   const { slug } = req.params
+  const { posts } = await getPosts()
 
   const sortedPosts = Object.keys(posts).map(key => posts[key])
   const post = sortedPosts.find(post => post.slug === slug)
 
-  return {
-    body: { post },
-  }
+  return new Response(JSON.stringify(post))
 }

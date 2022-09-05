@@ -5,6 +5,9 @@ Demo: https://sveltekit-mdsvex-starter-blog.vercel.app/
 Heavily inspired from [Mehdi Vasigh]'s [sveltekit-mdsvex-blog] and
 [Matt Jennings]'s [sveltekit-blog-template].
 
+Also massive thanks to @josh-collinsworth and his
+[sveltekit-blog-starter] example.
+
 Also this solution from [Michael Oliver] on [this issue].
 
 Uses:
@@ -28,3 +31,5 @@ Uses:
 [mdsvex]: https://mdsvex.com/
 [tailwind css]: https://tailwindcss.com/
 [daisyui]: https://daisyui.com/
+[sveltekit-blog-starter]:
+  https://github.com/josh-collinsworth/sveltekit-blog-starter

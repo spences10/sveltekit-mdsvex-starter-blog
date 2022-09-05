@@ -1,22 +1,9 @@
-<script context="module">
-  // export const prerender = true
-
-  export async function load({ fetch }) {
-    const res = await fetch(`/posts.json`)
-    if (res.ok) {
-      const { posts } = await res.json()
-      return {
-        props: { posts },
-      }
-    }
-  }
-</script>
-
 <script>
   import Head from '$lib/components/head.svelte'
   import PostCard from '$lib/components/post-card.svelte'
 
-  export let posts
+  export let data
+  let { posts } = data
 </script>
 
 <Head title={`All the Posts`} />
