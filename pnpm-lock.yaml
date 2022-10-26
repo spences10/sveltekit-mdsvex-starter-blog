@@ -8,7 +8,7 @@ specifiers:
   cssnano: 5.1.13
   daisyui: 2.31.0
   mdsvex: 0.10.6
-  mdsvex-relative-images: 1.0.2
+  mdsvex-relative-images: 1.0.3
   postcss: 8.4.18
   postcss-load-config: 4.0.1
   prettier: 2.7.1
@@ -26,13 +26,13 @@ specifiers:
 
 devDependencies:
   '@sveltejs/adapter-vercel': 1.0.0-next.80
-  '@sveltejs/kit': 1.0.0-next.522_svelte@3.52.0+vite@3.1.8
+  '@sveltejs/kit': 1.0.0-next.525_svelte@3.52.0+vite@3.1.8
   '@tailwindcss/typography': 0.5.7_tailwindcss@3.2.1
   autoprefixer: 10.4.12_postcss@8.4.18
   cssnano: 5.1.13_postcss@8.4.18
   daisyui: 2.31.0_xkowlklhtk6sfvtndbucb3hfiy
   mdsvex: 0.10.6_svelte@3.52.0
-  mdsvex-relative-images: 1.0.2
+  mdsvex-relative-images: 1.0.3
   postcss: 8.4.18
   postcss-load-config: 4.0.1_postcss@8.4.18
   prettier: 2.7.1
@@ -129,8 +129,8 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.522_svelte@3.52.0+vite@3.1.8:
-    resolution: {integrity: sha512-dVVrRPbXlAut4vg8kbCeZOjUZnYB7ZvDKp/yAx8InpDF0P1bvUDlc++DXFeMBdXX8bakTA3NGonWnDjqslCsZw==}
+  /@sveltejs/kit/1.0.0-next.525_svelte@3.52.0+vite@3.1.8:
+    resolution: {integrity: sha512-a8ivaONZhnRe+5fkyQxhOFgPja6iGwprhubN0Jqfa8AdjAzSBntHAuGqAxPnIGpLpXroXB9eN0tLhvK8xElS9A==}
     engines: {node: '>=16.14'}
     hasBin: true
     requiresBuild: true
@@ -1370,8 +1370,8 @@ packages:
     resolution: {integrity: sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==}
     dev: true
 
-  /mdsvex-relative-images/1.0.2:
-    resolution: {integrity: sha512-qBqt2T/h3R83dJZexiUB4OJhi8VJhQYO4q9/xFbgqNrHxPi0hpwmMlMm5FHcJ/Ps8ujh53Hz4U5vy/bthzbmeA==}
+  /mdsvex-relative-images/1.0.3:
+    resolution: {integrity: sha512-3XvpnaguRAhC5gchpqCH+A5Yl28xG9WDPylVla0+k90c5LT+QqSM+hwHd1v5C7gB2cAT0AIhuMsY/g6aCw+WDg==}
     dependencies:
       just-camel-case: 4.0.2
       unist-util-visit: 3.1.0
