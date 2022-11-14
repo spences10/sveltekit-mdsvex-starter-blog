@@ -16,7 +16,7 @@
     "@tailwindcss/typography": "0.5.8",
     "autoprefixer": "10.4.13",
     "cssnano": "5.1.14",
-    "daisyui": "2.38.1",
+    "daisyui": "2.40.1",
     "mdsvex": "0.10.6",
     "mdsvex-relative-images": "1.0.3",
     "postcss": "8.4.19",
