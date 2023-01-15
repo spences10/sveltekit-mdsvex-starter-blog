@@ -27,7 +27,7 @@
     "rehype-slug": "5.1.0",
     "remark-external-links": "9.0.1",
     "remark-reading-time": "1.0.1",
-    "svelte": "3.55.0",
+    "svelte": "3.55.1",
     "svelte-preprocess": "5.0.0",
     "tailwindcss": "3.2.4",
     "theme-change": "2.3.0",
