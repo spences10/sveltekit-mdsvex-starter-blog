@@ -19,7 +19,7 @@
     "daisyui": "2.51.5",
     "mdsvex": "0.10.6",
     "mdsvex-relative-images": "1.0.3",
-    "postcss": "8.4.21",
+    "postcss": "8.4.23",
     "postcss-load-config": "4.0.1",
     "prettier": "2.8.7",
     "prettier-plugin-svelte": "2.10.0",
