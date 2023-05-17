@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 devDependencies:
   '@sveltejs/adapter-vercel':
-    specifier: 2.4.3
-    version: 2.4.3(@sveltejs/kit@1.5.0)
+    specifier: 3.0.0
+    version: 3.0.0(@sveltejs/kit@1.5.0)
   '@sveltejs/kit':
     specifier: ^1.5.0
     version: 1.5.0(svelte@3.59.1)(vite@4.3.6)
@@ -354,8 +354,8 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sveltejs/adapter-vercel@2.4.3(@sveltejs/kit@1.5.0):
-    resolution: {integrity: sha512-3k/3udwaioFYdKDAgQcWSByB+KCbtjX+ARonYGCtYE0iuxWLStrESxy3SaU+17XD5Frh8w7tfY8ft4TV3ej3Dg==}
+  /@sveltejs/adapter-vercel@3.0.0(@sveltejs/kit@1.5.0):
+    resolution: {integrity: sha512-XHbgdYtEDM70tRAN3AV5mQAis/9yLka7mLEWjzuhMwo377U1jfwxBzq2YYZdL4OF3rQnegR3yf92fTWnkEILPQ==}
     peerDependencies:
       '@sveltejs/kit': ^1.5.0
     dependencies:
