@@ -1,4 +1,8 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
 
 devDependencies:
   '@sveltejs/adapter-vercel':
@@ -17,8 +21,8 @@ devDependencies:
     specifier: 6.0.1
     version: 6.0.1(postcss@8.4.23)
   daisyui:
-    specifier: 2.51.6
-    version: 2.51.6(autoprefixer@10.4.14)(postcss@8.4.23)
+    specifier: 2.52.0
+    version: 2.52.0(autoprefixer@10.4.14)(postcss@8.4.23)
   mdsvex:
     specifier: 0.10.6
     version: 0.10.6(svelte@3.59.1)
@@ -866,8 +870,8 @@ packages:
       css-tree: 2.2.1
     dev: true
 
-  /daisyui@2.51.6(autoprefixer@10.4.14)(postcss@8.4.23):
-    resolution: {integrity: sha512-JRqOKayuFCmWe4X4k6Qvx1y7V/VNao8U5eTSOhusOKIzCsYqf56+TCSe4d7zmqGE0V6JiLDYAT8JeoWUeRKFCw==}
+  /daisyui@2.52.0(autoprefixer@10.4.14)(postcss@8.4.23):
+    resolution: {integrity: sha512-LQTA5/IVXAJHBMFoeaEMfd7/akAFPPcdQPR3O9fzzcFiczneJFM73CFPnScmW2sOgn/D83cvkP854ep2T9OfTg==}
     peerDependencies:
       autoprefixer: ^10.0.2
       postcss: ^8.1.6
@@ -876,7 +880,7 @@ packages:
       color: 4.2.3
       css-selector-tokenizer: 0.8.0
       postcss: 8.4.23
-      postcss-js: 4.0.0(postcss@8.4.23)
+      postcss-js: 4.0.1(postcss@8.4.23)
       tailwindcss: 3.3.2
     transitivePeerDependencies:
       - ts-node
@@ -1720,16 +1724,6 @@ packages:
       postcss-value-parser: 4.2.0
       read-cache: 1.0.0
       resolve: 1.22.2
-    dev: true
-
-  /postcss-js@4.0.0(postcss@8.4.23):
-    resolution: {integrity: sha512-77QESFBwgX4irogGVPgQ5s07vLvFqWr228qZY+w6lW599cRlK/HmnlivnnVUxkjHnCu4J16PDMHcH+e+2HbvTQ==}
-    engines: {node: ^12 || ^14 || >= 16}
-    peerDependencies:
-      postcss: ^8.3.3
-    dependencies:
-      camelcase-css: 2.0.1
-      postcss: 8.4.23
     dev: true
 
   /postcss-js@4.0.1(postcss@8.4.23):
