@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -63,8 +63,8 @@ devDependencies:
     specifier: 3.3.2
     version: 3.3.2
   theme-change:
-    specifier: 2.4.0
-    version: 2.4.0
+    specifier: 2.5.0
+    version: 2.5.0
   truncate-html:
     specifier: 1.0.4
     version: 1.0.4
@@ -2401,8 +2401,8 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /theme-change@2.4.0:
-    resolution: {integrity: sha512-HbMckoxM7sV8L7wk53S5ceiBQWcTxFozuvUmvjdjPqpyVFkzPQHylSsDHYyT8qTruORe+1Sft7ExqlXQEeWHBA==}
+  /theme-change@2.5.0:
+    resolution: {integrity: sha512-B/UdsgdHAGhSKHTAQnxg/etN0RaMDpehuJmZIjLMDVJ6DGIliRHGD6pODi1CXLQAN9GV0GSyB3G6yCuK05PkPQ==}
     dev: true
 
   /thenify-all@1.6.0:
