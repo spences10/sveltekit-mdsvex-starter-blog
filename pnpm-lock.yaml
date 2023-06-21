@@ -21,8 +21,8 @@ devDependencies:
     specifier: 6.0.1
     version: 6.0.1(postcss@8.4.24)
   daisyui:
-    specifier: 3.0.0
-    version: 3.0.0(postcss@8.4.24)
+    specifier: 3.1.5
+    version: 3.1.5(postcss@8.4.24)
   mdsvex:
     specifier: 0.10.6
     version: 0.10.6(svelte@3.59.1)
@@ -865,8 +865,9 @@ packages:
       css-tree: 2.2.1
     dev: true
 
-  /daisyui@3.0.0(postcss@8.4.24):
-    resolution: {integrity: sha512-EuNK9JQd5yrPLDynAPQkG/29vjZXFWhBK4HXvM83d9oJU0EmF35UNLLs0cslBFfLK4b+bOuhgoYPJ4BjytOxNQ==}
+  /daisyui@3.1.5(postcss@8.4.24):
+    resolution: {integrity: sha512-3nk5L//IU31ISzsonKEFG8ris8hS/MRAc+PrOTOyRbssjv1fYmNKSdIrOhG6op2ED3RyJL4p6I81JUwd7RWqTw==}
+    engines: {node: '>=16.9.0'}
     peerDependencies:
       postcss: ^8
     dependencies:
