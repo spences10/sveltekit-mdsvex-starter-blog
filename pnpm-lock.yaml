@@ -57,8 +57,8 @@ devDependencies:
     specifier: 4.2.7
     version: 4.2.7
   svelte-preprocess:
-    specifier: 5.0.4
-    version: 5.0.4(postcss-load-config@4.0.1)(postcss@8.4.31)(svelte@4.2.7)
+    specifier: 5.1.1
+    version: 5.1.1(postcss-load-config@4.0.1)(postcss@8.4.31)(svelte@4.2.7)
   tailwindcss:
     specifier: 3.3.5
     version: 3.3.5
@@ -2369,8 +2369,8 @@ packages:
       svelte: 4.2.7
     dev: true
 
-  /svelte-preprocess@5.0.4(postcss-load-config@4.0.1)(postcss@8.4.31)(svelte@4.2.7):
-    resolution: {integrity: sha512-ABia2QegosxOGsVlsSBJvoWeXy1wUKSfF7SWJdTjLAbx/Y3SrVevvvbFNQqrSJw89+lNSsM58SipmZJ5SRi5iw==}
+  /svelte-preprocess@5.1.1(postcss-load-config@4.0.1)(postcss@8.4.31)(svelte@4.2.7):
+    resolution: {integrity: sha512-p/Dp4hmrBW5mrCCq29lEMFpIJT2FZsRlouxEc5qpbOmXRbaFs7clLs8oKPwD3xCFyZfv1bIhvOzpQkhMEVQdMw==}
     engines: {node: '>= 14.10.0'}
     requiresBuild: true
     peerDependencies:
@@ -2383,7 +2383,7 @@ packages:
       sass: ^1.26.8
       stylus: ^0.55.0
       sugarss: ^2.0.0 || ^3.0.0 || ^4.0.0
-      svelte: ^3.23.0 || ^4.0.0-next.0 || ^4.0.0
+      svelte: ^3.23.0 || ^4.0.0-next.0 || ^4.0.0 || ^5.0.0-next.0
       typescript: '>=3.9.5 || ^4.0.0 || ^5.0.0'
     peerDependenciesMeta:
       '@babel/core':
