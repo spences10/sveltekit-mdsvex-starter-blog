@@ -7,9 +7,9 @@ export const load = async () => {
       copy: copy.default,
     }
   } catch (e) {
-    throw error(
-      404,
-      `Uh oh! Sorry, looks like that page doesn't exist`
-    )
+    error(
+            404,
+            `Uh oh! Sorry, looks like that page doesn't exist`
+          );
   }
 }

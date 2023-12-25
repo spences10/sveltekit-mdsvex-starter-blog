@@ -11,6 +11,6 @@ export const load = async ({ fetch, params }) => {
       meta: { ...post.metadata, slug: params.post },
     }
   } catch (err) {
-    throw error(404, err.message)
+    error(404, err.message);
   }
 }
