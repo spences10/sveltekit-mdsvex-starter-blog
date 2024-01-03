@@ -11,7 +11,7 @@
     "clean": "rm -rf .svelte-kit .vercel_build_output build node_modules"
   },
   "devDependencies": {
-    "@sveltejs/adapter-vercel": "4.0.3",
+    "@sveltejs/adapter-vercel": "4.0.4",
     "@sveltejs/kit": "^2.0.6",
     "@sveltejs/vite-plugin-svelte": "^3.0.0",
     "@tailwindcss/typography": "0.5.10",
