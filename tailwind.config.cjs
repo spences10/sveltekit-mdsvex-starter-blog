@@ -1,18 +1,23 @@
-const config = {
-  mode: 'jit',
-  purge: ['./src/**/*.{html,js,svelte,ts}'],
-  theme: {
-    extend: {
-      typography: {
-        DEFAULT: {
-          css: {
-            maxWidth: null,
-          },
-        },
-      },
-    },
-  },
-  plugins: [require('@tailwindcss/typography'), require('daisyui')],
-}
+const daisyui = require('daisyui');
+const typography = require('@tailwindcss/typography');
 
-module.exports = config
+/** @type {import('tailwindcss').Config}*/
+const config = {
+	content: ['./src/**/*.{html,js,svelte,ts}'],
+
+	theme: {
+		extend: {
+			typography: {
+				DEFAULT: {
+					css: {
+						maxWidth: null,
+					},
+				},
+			},
+		},
+	},
+
+	plugins: [typography, daisyui],
+};
+
+module.exports = config;

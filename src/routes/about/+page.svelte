@@ -1,17 +1,17 @@
-<script>
-  import Head from '@components/head.svelte'
+<script lang="ts">
+	import { Head } from '$lib/components';
 
-  export let data
-  let { copy } = data
+	const { data } = $props();
+	let { copy } = data;
 </script>
 
 <Head title={`About`} />
 
-<h1 class="font-bold mb-5 text-5xl">About</h1>
-<div class="mb-10 all-prose">
-  <svelte:component this={copy} />
+<h1 class="mb-5 text-5xl font-bold">About</h1>
+<div class="all-prose mb-10">
+	<svelte:component this={copy} />
 </div>
 
-<div class="flex flex-col mb-20 w-full">
-  <div class="divider" />
+<div class="mb-20 flex w-full flex-col">
+	<div class="divider" />
 </div>

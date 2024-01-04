@@ -91,14 +91,14 @@ to return later in this post:
 
 ```js
 export async function get() {
-  const headers = {
-    'Cache-Control': 'max-age=0, s-maxage=3600',
-    'Content-Type': 'application/xml',
-  }
-  return {
-    headers,
-    body: `<rss xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns:content="https://purl.org/rss/1.0/modules/content/" xmlns:atom="https://www.w3.org/2005/Atom" version="2.0"></rss>`,
-  }
+	const headers = {
+		'Cache-Control': 'max-age=0, s-maxage=3600',
+		'Content-Type': 'application/xml',
+	};
+	return {
+		headers,
+		body: `<rss xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns:content="https://purl.org/rss/1.0/modules/content/" xmlns:atom="https://www.w3.org/2005/Atom" version="2.0"></rss>`,
+	};
 }
 ```
 
@@ -118,23 +118,23 @@ Now to add in the `<channel>` element with the required `<title>`,
 I'll import these and hardcode in a description for now.
 
 ```js
-import { name, website } from '$lib/info'
+import { name, website } from '$lib/info';
 
 export async function get() {
-  const headers = {
-    'Cache-Control': 'max-age=0, s-maxage=3600',
-    'Content-Type': 'application/xml',
-  }
-  return {
-    headers,
-    body: `<rss xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns:content="https://purl.org/rss/1.0/modules/content/" xmlns:atom="https://www.w3.org/2005/Atom" version="2.0">
+	const headers = {
+		'Cache-Control': 'max-age=0, s-maxage=3600',
+		'Content-Type': 'application/xml',
+	};
+	return {
+		headers,
+		body: `<rss xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns:content="https://purl.org/rss/1.0/modules/content/" xmlns:atom="https://www.w3.org/2005/Atom" version="2.0">
       <channel>
         <title>${name}</title>
         <link>${website}</link>
         <description>A blog built with SvelteKit about tech and stuff!</description>
       </channel>
     </rss>`,
-  }
+	};
 }
 ```
 
@@ -153,15 +153,15 @@ The code for get posts is:
 
 ```js
 export async function getPosts() {
-  const posts = await Object.entries(
-    import.meta.globEager('/posts/**/*.md')
-  )
-    // get post metadata
-    .map(([, post]) => post.metadata)
-    // sort by date
-    .sort((a, b) => (a.date < b.date ? 1 : -1))
+	const posts = await Object.entries(
+		import.meta.globEager('/posts/**/*.md'),
+	)
+		// get post metadata
+		.map(([, post]) => post.metadata)
+		// sort by date
+		.sort((a, b) => (a.date < b.date ? 1 : -1));
 
-  return posts
+	return posts;
 }
 ```
 
@@ -172,31 +172,32 @@ First up though, rather than have the return statement all cluttered
 up with the generated XML I'll break this into it's own function:
 
 ```js
-import { getPosts } from '$lib/get-posts'
-import { name, website } from '$lib/info'
+import { getPosts } from '$lib/get-posts';
+import { name, website } from '$lib/info';
 
 export async function get() {
-  const posts = await getPosts()
-  const body = xml(posts)
+	const posts = await getPosts();
+	const body = xml(posts);
 
-  const headers = {
-    'Cache-Control': 'max-age=0, s-maxage=3600',
-    'Content-Type': 'application/xml',
-  }
-  return {
-    headers,
-    body,
-  }
+	const headers = {
+		'Cache-Control': 'max-age=0, s-maxage=3600',
+		'Content-Type': 'application/xml',
+	};
+	return {
+		headers,
+		body,
+	};
 }
 
-const xml =
-  posts => `<rss xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns:content="https://purl.org/rss/1.0/modules/content/" xmlns:atom="https://www.w3.org/2005/Atom" version="2.0">
+const xml = (
+	posts,
+) => `<rss xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns:content="https://purl.org/rss/1.0/modules/content/" xmlns:atom="https://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>${name}</title>
     <link>${website}</link>
     <description>A blog built with SvelteKit about tech and stuff!</description>
   </channel>
-</rss>`
+</rss>`;
 ```
 
 Now it's a case of mapping over the posts and creating the XML for
@@ -206,33 +207,34 @@ mapping over the `posts` variable returned from `getPosts`.
 Here's the complete file:
 
 ```js
-import { getPosts } from '$lib/get-posts'
-import { name, website } from '$lib/info'
+import { getPosts } from '$lib/get-posts';
+import { name, website } from '$lib/info';
 
 export async function get() {
-  const posts = await getPosts()
-  const body = xml(posts)
+	const posts = await getPosts();
+	const body = xml(posts);
 
-  const headers = {
-    'Cache-Control': 'max-age=0, s-maxage=3600',
-    'Content-Type': 'application/xml',
-  }
-  return {
-    headers,
-    body,
-  }
+	const headers = {
+		'Cache-Control': 'max-age=0, s-maxage=3600',
+		'Content-Type': 'application/xml',
+	};
+	return {
+		headers,
+		body,
+	};
 }
 
-const xml =
-  posts => `<rss xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns:content="https://purl.org/rss/1.0/modules/content/" xmlns:atom="https://www.w3.org/2005/Atom" version="2.0">
+const xml = (
+	posts,
+) => `<rss xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns:content="https://purl.org/rss/1.0/modules/content/" xmlns:atom="https://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>${name}</title>
     <link>${website}</link>
     <description>A blog built with SvelteKit about tech and stuff!</description>
     ${posts
-      .map(
-        post =>
-          `
+			.map(
+				(post) =>
+					`
         <item>
           <title>${post.title}</title>
           <description>A blog built with SvelteKit about tech and stuff!</description>
@@ -248,11 +250,11 @@ const xml =
             </div>
           </content:encoded>
         </item>
-      `
-      )
-      .join('')}
+      `,
+			)
+			.join('')}
   </channel>
-</rss>`
+</rss>`;
 ```
 
 You'll notice I've added some extra markup for `<content:encoded>` and
@@ -275,14 +277,14 @@ project.
 
 [blog]: https://scottspence.com/posts
 [sitemap generation for dynamic routes in nextjs with the sanity client]:
-  https://scottspence.com/posts/dynamic-sitemap-generation-with-nextjs-and-sanity
+	https://scottspence.com/posts/dynamic-sitemap-generation-with-nextjs-and-sanity
 [routing endpoints]: https://kit.svelte.dev/docs#routing-endpoints
 [`https://scottspence.com/rss.xml`]: https://scottspence.com/rss.xml
 [template from matt jennings]:
-  https://github.com/mattjennings/sveltekit-blog-template
+	https://github.com/mattjennings/sveltekit-blog-template
 [expiration]:
-  https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#expiration
+	https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#expiration
 [w3c feed validation service]:
-  https://validator.w3.org/feed/docs/rss2.html
+	https://validator.w3.org/feed/docs/rss2.html
 [template literals]:
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals

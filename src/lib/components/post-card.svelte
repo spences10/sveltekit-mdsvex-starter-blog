@@ -1,18 +1,18 @@
 <script>
-  export let post
+	export let post;
 </script>
 
 <article
-  class="border border-primary bg-base-100 shadow-xl mb-10 p-5 transition card hover:text-accent-focus first:pt-0"
+	class="hover:text-accent-focus card mb-10 border border-primary bg-base-100 p-5 shadow-xl transition first:pt-0"
 >
-  <a sveltekit:prefetch href={`/posts/${post.slug}`}>
-    <div>
-      <h2 class="font-black mt-5 mb-1 text-3xl">
-        {post.title}
-      </h2>
-      <div class="font-bold text-accent text-sm mb-4 uppercase">
-        <time>{new Date(post.date).toDateString()}</time>
-      </div>
-    </div>
-  </a>
+	<a sveltekit:prefetch href={`/posts/${post.slug}`}>
+		<div>
+			<h2 class="mb-1 mt-5 text-3xl font-black">
+				{post.title}
+			</h2>
+			<div class="mb-4 text-sm font-bold uppercase text-accent">
+				<time>{new Date(post.date).toDateString()}</time>
+			</div>
+		</div>
+	</a>
 </article>

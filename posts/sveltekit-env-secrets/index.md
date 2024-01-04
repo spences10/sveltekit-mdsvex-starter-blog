@@ -36,7 +36,7 @@ SUPER_SECRET_SECRET=shhhhhh
 Then I've created a `secret.js` file to access my secret:
 
 ```js
-export const API_URL = process.env['SUPER_SECRET_SECRET']
+export const API_URL = process.env['SUPER_SECRET_SECRET'];
 ```
 
 Then I've added `env-cmd` to my `dev` script in my `package.json` so
@@ -58,6 +58,6 @@ this!
 
 [vite]: https://vitejs.dev/
 [env variables and modes]:
-  https://vitejs.dev/guide/env-and-mode.html#env-variables
+	https://vitejs.dev/guide/env-and-mode.html#env-variables
 [env-cmd]: https://www.npmjs.com/package/env-cmd
 [dotenv]: https://www.npmjs.com/package/dotenv

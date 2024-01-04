@@ -82,13 +82,13 @@ visual feedback:
 
 ```js
 export async function get() {
-  const headers = {
-    'Cache-Control': 'max-age=0, s-maxage=3600',
-    'Content-Type': 'application/xml',
-  }
-  return {
-    headers,
-    body: `<?xml version="1.0" encoding="UTF-8" ?>
+	const headers = {
+		'Cache-Control': 'max-age=0, s-maxage=3600',
+		'Content-Type': 'application/xml',
+	};
+	return {
+		headers,
+		body: `<?xml version="1.0" encoding="UTF-8" ?>
     <urlset
       xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:news="https://www.google.com/schemas/sitemap-news/0.9"
@@ -97,7 +97,7 @@ export async function get() {
       xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
       xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
     ></urlset>`,
-  }
+	};
 }
 ```
 
@@ -126,16 +126,16 @@ In Matt's template there's an `info.js` file that contains the project
 `name` and `website` links. I'll import the `website` and use that.
 
 ```js
-import { website } from '$lib/info'
+import { website } from '$lib/info';
 
 export async function get() {
-  const headers = {
-    'Cache-Control': 'max-age=0, s-maxage=3600',
-    'Content-Type': 'application/xml',
-  }
-  return {
-    headers,
-    body: `<?xml version="1.0" encoding="UTF-8" ?>
+	const headers = {
+		'Cache-Control': 'max-age=0, s-maxage=3600',
+		'Content-Type': 'application/xml',
+	};
+	return {
+		headers,
+		body: `<?xml version="1.0" encoding="UTF-8" ?>
     <urlset
       xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:news="https://www.google.com/schemas/sitemap-news/0.9"
@@ -150,7 +150,7 @@ export async function get() {
         <priority>0.7</priority>
       </url>
     </urlset>`,
-  }
+	};
 }
 ```
 
@@ -175,15 +175,15 @@ Here's what the function for `getPosts` looks like:
 
 ```js
 export async function getPosts() {
-  const posts = await Object.entries(
-    import.meta.globEager('/posts/**/*.md')
-  )
-    // get post metadata
-    .map(([, post]) => post.metadata)
-    // sort by date
-    .sort((a, b) => (a.date < b.date ? 1 : -1))
+	const posts = await Object.entries(
+		import.meta.globEager('/posts/**/*.md'),
+	)
+		// get post metadata
+		.map(([, post]) => post.metadata)
+		// sort by date
+		.sort((a, b) => (a.date < b.date ? 1 : -1));
 
-  return posts
+	return posts;
 }
 ```
 
@@ -198,7 +198,7 @@ I can pass the `posts` from the `getPosts()` function into this, then
 I can map over each post and render out the markup for each one:
 
 ```js
-const sitemap = posts => `<?xml version="1.0" encoding="UTF-8" ?>
+const sitemap = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
 <urlset
   xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:news="https://www.google.com/schemas/sitemap-news/0.9"
@@ -213,19 +213,19 @@ const sitemap = posts => `<?xml version="1.0" encoding="UTF-8" ?>
     <priority>0.7</priority>
   </url>
   ${posts
-    .map(post =>
-      post.isPrivate
-        ? null
-        : `
+		.map((post) =>
+			post.isPrivate
+				? null
+				: `
   <url>
     <loc>${website}/posts/${post.slug}</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
-  `
-    )
-    .join('')}
-</urlset>`
+  `,
+		)
+		.join('')}
+</urlset>`;
 ```
 
 Now in the get function I'll pass the `posts` from the `getPosts()`
@@ -235,24 +235,24 @@ into the `sitemap` function and use that for the body return of
 Here's the full file:
 
 ```js
-import { getPosts } from '$lib/get-posts'
-import { website } from '$lib/info'
+import { getPosts } from '$lib/get-posts';
+import { website } from '$lib/info';
 
 export async function get() {
-  const posts = await getPosts()
-  const body = sitemap(posts)
+	const posts = await getPosts();
+	const body = sitemap(posts);
 
-  const headers = {
-    'Cache-Control': 'max-age=0, s-maxage=3600',
-    'Content-Type': 'application/xml',
-  }
-  return {
-    headers,
-    body,
-  }
+	const headers = {
+		'Cache-Control': 'max-age=0, s-maxage=3600',
+		'Content-Type': 'application/xml',
+	};
+	return {
+		headers,
+		body,
+	};
 }
 
-const sitemap = posts => `<?xml version="1.0" encoding="UTF-8" ?>
+const sitemap = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
 <urlset
   xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:news="https://www.google.com/schemas/sitemap-news/0.9"
@@ -267,19 +267,19 @@ const sitemap = posts => `<?xml version="1.0" encoding="UTF-8" ?>
     <priority>0.7</priority>
   </url>
   ${posts
-    .map(post =>
-      post.isPrivate
-        ? null
-        : `
+		.map((post) =>
+			post.isPrivate
+				? null
+				: `
   <url>
     <loc>${website}/posts/${post.slug}</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
-  `
-    )
-    .join('')}
-</urlset>`
+  `,
+		)
+		.join('')}
+</urlset>`;
 ```
 
 ## Next steps from here
@@ -296,27 +296,27 @@ I can add any new pages to the array rather than creating a new
 how that may look:
 
 ```js
-import { getPosts } from '$lib/get-posts'
-import { website } from '$lib/info'
+import { getPosts } from '$lib/get-posts';
+import { website } from '$lib/info';
 
 export async function get() {
-  const posts = await getPosts()
-  const pages = [`about`, `newsletter`, `privacy-policy`]
-  const body = sitemap(posts, pages)
+	const posts = await getPosts();
+	const pages = [`about`, `newsletter`, `privacy-policy`];
+	const body = sitemap(posts, pages);
 
-  const headers = {
-    'Cache-Control': 'max-age=0, s-maxage=3600',
-    'Content-Type': 'application/xml',
-  }
-  return {
-    headers,
-    body,
-  }
+	const headers = {
+		'Cache-Control': 'max-age=0, s-maxage=3600',
+		'Content-Type': 'application/xml',
+	};
+	return {
+		headers,
+		body,
+	};
 }
 
 const sitemap = (
-  posts,
-  pages
+	posts,
+	pages,
 ) => `<?xml version="1.0" encoding="UTF-8" ?>
 <urlset
   xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
@@ -332,30 +332,30 @@ const sitemap = (
     <priority>0.7</priority>
   </url>
   ${pages
-    .map(
-      page => `
+		.map(
+			(page) => `
   <url>
     <loc>${website}/${page}</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
-  `
-    )
-    .join('')}
+  `,
+		)
+		.join('')}
   ${posts
-    .map(post =>
-      post.isPrivate
-        ? null
-        : `
+		.map((post) =>
+			post.isPrivate
+				? null
+				: `
   <url>
     <loc>${website}/posts/${post.slug}</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
-  `
-    )
-    .join('')}
-</urlset>`
+  `,
+		)
+		.join('')}
+</urlset>`;
 ```
 
 ## Conclusion
@@ -369,13 +369,13 @@ making your own sitemap on your SvelteKit projects.
 <!-- Links -->
 
 [making an rss feed for your sveltekit project]:
-  https://scottspence.com/posts/make-an-rss-feed-with-sveltekit
+	https://scottspence.com/posts/make-an-rss-feed-with-sveltekit
 [sveltekit blog template]:
-  https://github.com/mattjennings/sveltekit-blog-template
+	https://github.com/mattjennings/sveltekit-blog-template
 [sveltekit endpoints]: https://kit.svelte.dev/docs#routing-endpoints
 [expiration]:
-  https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#expiration
+	https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#expiration
 [w3c feed validation service]:
-  https://validator.w3.org/feed/docs/rss2.html
+	https://validator.w3.org/feed/docs/rss2.html
 [josh comeau's sitemap]: https://www.joshwcomeau.com/sitemap.xml
 [sitemaps.org]: https://www.sitemaps.org/protocol.html

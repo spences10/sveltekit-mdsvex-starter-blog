@@ -12,31 +12,31 @@ There's some SvelteKit `prerender` settings that need configuration
 here's what I set in the `svelte.config.js` file:
 
 ```js
-import adapter from '@sveltejs/adapter-static'
-import preprocess from 'svelte-preprocess'
+import adapter from '@sveltejs/adapter-static';
+import preprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  kit: {
-    // hydrate the <div id="svelte"> element in src/app.html
-    target: '#svelte',
-    adapter: adapter(),
-    prerender: {
-      crawl: true,
-      enabled: true,
-      onError: 'continue',
-      entries: ['*'],
-    },
-  },
+	kit: {
+		// hydrate the <div id="svelte"> element in src/app.html
+		target: '#svelte',
+		adapter: adapter(),
+		prerender: {
+			crawl: true,
+			enabled: true,
+			onError: 'continue',
+			entries: ['*'],
+		},
+	},
 
-  preprocess: [
-    preprocess({
-      postcss: true,
-    }),
-  ],
-}
+	preprocess: [
+		preprocess({
+			postcss: true,
+		}),
+	],
+};
 
-export default config
+export default config;
 ```
 
 Also for the pages that use the endpoint I've added the following to
@@ -44,7 +44,7 @@ any page that uses an endpoint:
 
 ```html
 <script context="module">
-  export const prerender = true
-  // rest of the code for the endpoint
+	export const prerender = true;
+	// rest of the code for the endpoint
 </script>
 ```
