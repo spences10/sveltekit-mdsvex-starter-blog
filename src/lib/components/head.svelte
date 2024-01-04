@@ -3,9 +3,9 @@
 
 	const { title, description, image, url } = $props<{
 		title: string;
-		description: string;
-		image: string;
-		url: string;
+		description?: string;
+		image?: string;
+		url?: string;
 	}>();
 </script>
 
