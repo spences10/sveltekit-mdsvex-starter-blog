@@ -1,29 +1,47 @@
+<script lang="ts">
+	export const themes = [
+		'acid',
+		'aqua',
+		'autumn',
+		'black',
+		'bumblebee',
+		'business',
+		'cmyk',
+		'coffee',
+		'corporate',
+		'cupcake',
+		'cyberpunk',
+		'dark',
+		'dracula',
+		'emerald',
+		'fantasy',
+		'forest',
+		'garden',
+		'halloween',
+		'lemonade',
+		'light',
+		'lofi',
+		'luxury',
+		'night',
+		'pastel',
+		'retro',
+		'synthwave',
+		'valentine',
+		'winter',
+		'wireframe',
+	];
+</script>
+
 <div>
 	<select
 		data-choose-theme
 		class="select select-bordered select-primary select-xs bg-primary pr-9 text-primary-content"
 	>
 		<option disabled selected>Choose a theme</option>
-		<option value="aqua">Aqua</option>
-		<option value="black">Black</option>
-		<option value="bumblebee">Bumblebee</option>
-		<option value="corporate">Corporate</option>
-		<option value="cupcake">Cupcake</option>
-		<option value="cyberpunk">Cyberpunk</option>
-		<option value="dark">Dark</option>
-		<option value="dracula">Dracula</option>
-		<option value="emerald">Emerald</option>
-		<option value="fantasy">Fantasy</option>
-		<option value="forest">Forest</option>
-		<option value="garden">Garden</option>
-		<option value="halloween">Halloween</option>
-		<option value="light">Light</option>
-		<option value="lofi">Lofi</option>
-		<option value="luxury">Luxury</option>
-		<option value="pastel">Pastel</option>
-		<option value="retro">Retro</option>
-		<option value="synthwave">Synthwave</option>
-		<option value="valentine">Valentine</option>
-		<option value="wireframe">Wireframe</option>
+		{#each themes as theme, index}
+			<option class="capitalize" id={index.toString()} value={theme}>
+				{theme.charAt(0).toUpperCase() + theme.slice(1)}
+			</option>
+		{/each}
 	</select>
 </div>

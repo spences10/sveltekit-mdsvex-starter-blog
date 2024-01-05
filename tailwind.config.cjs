@@ -18,6 +18,12 @@ const config = {
 	},
 
 	plugins: [typography, daisyui],
+
+	daisyui: {
+		darkTheme: 'night',
+		themes: true,
+		logs: false,
+	},
 };
 
 module.exports = config;
