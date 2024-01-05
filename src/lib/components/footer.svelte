@@ -4,6 +4,8 @@
 		GitHub,
 		Twitter,
 		YouTube,
+		author_name,
+		site_name,
 		social_links,
 	} from '$lib';
 </script>
@@ -26,9 +28,11 @@
 	<aside>
 		<BadgeCheck height={60} width={60} />
 		<p class="font-bold">
-			ACME Industries Ltd. <br />Providing reliable tech since 1992
+			{author_name} <br /> {site_name}
 		</p>
-		<p>Copyright © 2024 - All right reserved</p>
+		<p>
+			Copyright © {`${new Date().getFullYear()}`} - All right reserved
+		</p>
 	</aside>
 	<nav>
 		<div class="grid grid-flow-col gap-4">
