@@ -1,27 +1,25 @@
-import { basename, dirname } from 'path';
-
-export const getPosts = async () => {
-	// taken from josh-collinsworth's blog starter! Thanks Josh!
-	// https://github.com/josh-collinsworth/sveltekit-blog-starter/blob/main/src/routes/api/posts/index.json.js
-	const posts = await Promise.all(
+export const get_posts = async () => {
+	// Fetch posts from local Markdown files
+	const posts: Post[] = await Promise.all(
 		Object.entries(import.meta.glob('../../posts/**/*.md')).map(
 			async ([path, resolver]) => {
-				const { metadata } = await resolver();
-				const slug = basename(dirname(path));
+				const resolved = (await resolver()) as { metadata: Post };
+				const { metadata } = resolved;
+				const slug = path.split('/').pop()?.slice(0, -3) ?? '';
 				return { ...metadata, slug };
 			},
 		),
 	);
 
-	let sortedPosts = posts.sort(
+	let sorted_posts = posts.sort(
 		(a, b) => +new Date(b.date) - +new Date(a.date),
 	);
 
-	sortedPosts = sortedPosts.map((post) => ({
+	sorted_posts = sorted_posts.map((post) => ({
 		...post,
 	}));
 
 	return {
-		posts: sortedPosts,
+		posts: sorted_posts,
 	};
 };

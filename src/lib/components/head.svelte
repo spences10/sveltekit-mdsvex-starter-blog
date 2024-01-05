@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { authorName, website } from '$lib/site-config';
+	import { author_name, website } from '$lib';
 
 	const { title, description, image, url } = $props<{
 		title: string;
@@ -16,7 +16,7 @@
 	<!-- HTML Meta Tags -->
 	<title>{title}</title>
 	<meta name="description" content={description} />
-	<meta name="author" content={authorName} />
+	<meta name="author" content={author_name} />
 
 	<!-- Google / Search Engine Tags -->
 	<meta itemprop="name" content={title} />

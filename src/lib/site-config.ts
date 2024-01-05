@@ -1,6 +1,6 @@
-export const siteName = 'SvelteKit Blog Template';
+export const site_name = 'SvelteKit Blog Template';
 
-export const authorName = 'Author Name';
+export const author_name = 'Author Name';
 
 export const website = `https://thesveltekit.com`;
 
@@ -12,7 +12,7 @@ export const pages = [
 	{ title: `About`, path: `/about` },
 ];
 
-export const socialLinks = [
+export const social_links = [
 	{ title: `Twitter`, path: `https://twitter.com/username` },
 	{ title: `YouTube`, path: `https://youtube.com/username` },
 	{ title: `GitHub`, path: `https://github.com/username` },

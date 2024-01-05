@@ -1,7 +1,9 @@
-<script>
-	export let height = 20;
-	export let width = 20;
-	export let tailwindClasses = '';
+<script lang="ts">
+	const { height, width, tailwindClasses } = $props<{
+		height?: number;
+		width?: number;
+		tailwindClasses?: string;
+	}>();
 </script>
 
 <svg

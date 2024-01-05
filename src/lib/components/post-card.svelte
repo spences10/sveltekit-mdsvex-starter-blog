@@ -1,11 +1,11 @@
-<script>
-	export let post;
+<script lang="ts">
+	const { post } = $props<{ post: Post }>();
 </script>
 
 <article
 	class="hover:text-accent-focus card mb-10 border border-primary bg-base-100 p-5 shadow-xl transition first:pt-0"
 >
-	<a sveltekit:prefetch href={`/posts/${post.slug}`}>
+	<a href={`/posts/${post.slug}`}>
 		<div>
 			<h2 class="mb-1 mt-5 text-3xl font-black">
 				{post.title}
