@@ -1,5 +1,9 @@
 <script lang="ts">
-	const { height, width, tailwindClasses } = $props<{
+	const {
+		height = 20,
+		width = 20,
+		tailwindClasses,
+	} = $props<{
 		height?: number;
 		width?: number;
 		tailwindClasses?: string;
