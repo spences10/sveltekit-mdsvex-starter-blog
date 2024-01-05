@@ -14,7 +14,7 @@ I made an RSS feed for my [blog] using SvelteKit routes. I did this
 much like the [Sitemap Generation for Dynamic Routes In NextJS with
 the Sanity Client] post I did back in February.
 
-## RSS on [`scottspence.com`](https://scottspence.com)
+## RSS on scottspence.com
 
 As I mentioned already as my blog is a SvelteKit project I can use the
 SvelteKit [routing endpoints] to define the data type I want returned

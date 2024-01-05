@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Head } from '$lib/components';
+	import { Head } from '$lib';
 
 	const { data } = $props();
 	let { copy } = data;

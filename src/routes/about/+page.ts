@@ -1,10 +1,11 @@
 import { error } from '@sveltejs/kit';
 
 export const load = async () => {
+	const slug = 'about';
 	try {
-		const copy = await import(`../../../copy/about.md`);
+		const Copy = await import(`../../../copy/${slug}.md`);
 		return {
-			copy: copy.default,
+			copy: Copy.default,
 		};
 	} catch (e) {
 		error(404, `Uh oh! Sorry, looks like that page doesn't exist`);

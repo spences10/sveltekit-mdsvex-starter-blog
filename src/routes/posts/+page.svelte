@@ -1,8 +1,7 @@
-<script>
-	import Head from '$lib/components/head.svelte';
-	import PostCard from '$lib/components/post-card.svelte';
+<script lang="ts">
+	import { Head, PostCard } from '$lib';
 
-	export let data;
+	const { data } = $props();
 	let { posts } = data;
 </script>
 

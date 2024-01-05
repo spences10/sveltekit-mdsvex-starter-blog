@@ -1,9 +1,9 @@
-<script>
-	import Head from '$lib/components/head.svelte';
+<script lang="ts">
+	import { Head } from '$lib';
 
-	export let data;
+	const { data } = $props();
 	let {
-		html,
+		Content,
 		meta: { date, title, readingTime },
 	} = data;
 </script>
@@ -15,8 +15,8 @@
 	<div class="">
 		<p>{new Date(date).toDateString()}</p>
 		<p class="mb-16">{readingTime.text}</p>
-		<article class="all-prose">
-			{@html html}
-		</article>
+		<div class="all-prose mb-10">
+			<svelte:component this={Content} />
+		</div>
 	</div>
 </article>

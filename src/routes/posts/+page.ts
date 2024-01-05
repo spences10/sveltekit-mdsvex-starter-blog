@@ -1,9 +1,9 @@
-// export const prerender = true
-
-export async function load({ fetch }) {
-	const res = await fetch(`/posts.json`);
+export const load = async ({ fetch }) => {
+	const res = await fetch(`api/posts`);
 	if (res.ok) {
-		const { posts } = await res.json();
+		const posts = await res.json();
 		return { posts };
+	} else {
+		return { posts: [] };
 	}
-}
+};

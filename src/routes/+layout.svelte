@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Footer, Nav } from '$lib/components';
+	import { Footer, Nav } from '$lib';
 	import { onMount } from 'svelte';
 	import { themeChange } from 'theme-change';
 	import '../app.postcss';

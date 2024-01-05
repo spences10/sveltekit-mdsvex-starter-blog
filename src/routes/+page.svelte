@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { EndlessClouds, Head } from '$lib/components';
-	import { description, siteName } from '$lib/site-config';
+	import { EndlessClouds, Head, description, site_name } from '$lib';
 </script>
 
 <Head title={`Hello World`} />
@@ -14,7 +13,7 @@
 				Hello there
 			</h1>
 			<h2 class="mb-5 text-4xl font-bold text-secondary">
-				Welcome to the {siteName}
+				Welcome to the {site_name}
 			</h2>
 			<p class="mb-5">
 				{description}
